@@ -1,0 +1,80 @@
+:root{
+    --color-fondo: rgb(40, 49, 59);
+    --color-navbar: rgb(28, 34, 41);
+    --color-buttons: rgb(28, 145, 28);
+    --color-hover: rgb(24, 129, 24);
+}
+
+main{
+    overflow: auto;
+}
+.navbar{
+    background-color: var(--color-navbar);
+    color: azure;
+}
+/*Home sections*/
+.home_section{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem;
+    overflow: auto;
+}
+.home_section:nth-child(even){
+    background-color: rgb(255, 255, 255);
+    color: rgb(37, 37, 37);
+}
+.home_section:nth-child(odd){
+    background-color: var(--color-fondo);
+    color: white;
+}
+.home_section div{
+    padding-left: 2rem;
+}
+.home_section img{
+    width: 200px;
+}
+
+
+/*Cards*/
+.cards{
+    padding: 2rem;
+    display:grid;   
+    background-color: var(--color-fondo);
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+}
+.card{
+    max-height: 350px;
+    overflow: hidden;
+    background-color: rgb(233, 233, 233);
+    padding: 2rem;
+    margin: 4rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+
+}
+.content{
+    overflow-y: auto;
+}
+
+/*All buttons*/
+.button {
+    width: 150px;
+    display: inline-block;
+    background-color: var(--color-buttons);
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    text-align: center;
+    padding: 8px;
+    box-shadow: 1px 5px 10px #1b1b1b;
+    margin: 3px;
+}
+.button:hover{
+    background-color: var(--color-hover)
+}
+
+
+footer{
+    background-color: var(--color-navbar);
+    color: azure;
+}
