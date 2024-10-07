@@ -4,14 +4,24 @@
     --color-buttons: rgb(28, 145, 28);
     --color-hover: rgb(24, 129, 24);
 }
-
 main{
     overflow: auto;
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-navbar);
+    color: azure;
+    padding: 1rem;
+}
+.footer__logo{
+    width: 200px;
 }
 .navbar{
     background-color: var(--color-navbar);
     color: azure;
 }
+
 /*Home sections*/
 .home_section{
     display: flex;
@@ -34,10 +44,8 @@ main{
     width: 200px;
 }
 
-
 /*Cards*/
 .cards{
-    padding: 2rem;
     display:grid;   
     background-color: var(--color-fondo);
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -50,10 +58,16 @@ main{
     margin: 4rem;
     margin-bottom: 1rem;
     border-radius: 10px;
-
 }
 .content{
     overflow-y: auto;
+}
+
+/*Formulary*/
+.formulary{
+    padding: 5rem;
+    background-color: var(--color-fondo);
+    color: azure;
 }
 
 /*All buttons*/
@@ -71,10 +85,4 @@ main{
 }
 .button:hover{
     background-color: var(--color-hover)
-}
-
-
-footer{
-    background-color: var(--color-navbar);
-    color: azure;
 }

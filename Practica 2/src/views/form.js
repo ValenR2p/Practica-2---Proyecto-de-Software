@@ -3,7 +3,7 @@ import Footer from "../components/footer.js";
 import CreateProject from "../services/createProject.js";
 
 
-document.getElementById('createButton').addEventListener('click', function(event) {
+document.getElementById('button').addEventListener('click', function(event) {
     CreateProject();
 });
 
