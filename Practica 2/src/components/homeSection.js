@@ -7,5 +7,5 @@ export default function Section(sectionData){
                     <a class="button" href="${sectionData.link}">${sectionData.operation}</a>
                 </div>
             </section>
-            `
+            `;
 }

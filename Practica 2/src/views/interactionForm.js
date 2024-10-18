@@ -1,10 +1,11 @@
 import Navbar from "../components/navbar.js";
 import Footer from "../components/footer.js";
-import CreateProject from "../services/createProject.js";
+import CreateInteraction from "../services/createInteraction.js";
 
-document.getElementById('button').addEventListener('click', function(event) {
-    
-    CreateProject();
+
+document.getElementById('button').addEventListener('click', function() {
+    let url = localStorage.getItem('Id');
+    CreateInteraction(url);
 });
 
 const render = async () => {

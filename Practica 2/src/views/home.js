@@ -1,13 +1,13 @@
-import Section from "../components/section.js";
+import Section from "../components/homeSection.js";
 import Navbar from "../components/navbar.js";
 import Footer from "../components/footer.js";
 
 const sectionsData = [
     {
         image: './img/mujer-ilustrada-siendo-pasante-empresa_23-2148726151.avif',
-        title: "List of Projects",
-        text:"A simplified list that contains all the projects in development",
-        link:"./projectsList.html",
+        title: "List of Clients",
+        text:"A list that contains all of the current clients, with the ability to create a new Project for each client",
+        link:"./clientsList.html",
         operation:"Show List",
     },
     {
@@ -17,17 +17,7 @@ const sectionsData = [
         link:"./projectsCards.html",
         operation:"Show Projects",
     },
-    {
-        image: './img/mujer-ilustrada-siendo-pasante-empresa_23-2148726151.avif',
-        title: "EndPointPorJS",
-        text:"La tengo re grande",
-        link:"./projectsList.html",
-        operation:"MiEndpointEnJS",
-    },
-
-
 ]
-
 const render = async () => {
     let nav = document.getElementById("navbar");
     nav.innerHTML += Navbar();
@@ -41,7 +31,4 @@ const render = async () => {
     }) 
     
 }
-
-
 window.onload = render;
-

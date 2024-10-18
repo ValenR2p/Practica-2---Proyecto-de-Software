@@ -1,14 +1,15 @@
-export default function CreateInteraction(url){  
+export default function CreateTask(url){  
     const formData = {
-        interactionType: document.getElementById('interactionType').value,
-        date: document.getElementById('date').value,
-        notes: document.getElementById('notes').value,
+        name: document.getElementById('name').value,
+        dueDate: document.getElementById('dueDate').value,
+        assignedTo: document.getElementById('user').value,
+        status: document.getElementById('status').value,
     };
     
     console.log(url);
     console.log(formData);
 
-    fetch('https://localhost:7162/api/v1/Project/' + url + '/interactions', {
+    fetch('https://localhost:7162/api/v1/Project/' + url + '/tasks', {
         method: 'POST', 
         headers: {
             'Content-Type': 'application/json'

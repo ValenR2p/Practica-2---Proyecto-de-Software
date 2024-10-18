@@ -2,7 +2,7 @@ import Task from "./task.js";
 import Interaction from "./interaction.js";
 
 export default function Cards(projectData){
-    return `<section class="card">
+    return `<div class="card">
                 <h5>${projectData.data.projectName}</h5>
                 <ul class="content">
                     <li>Project ID: ${projectData.data.projectID}</li>
@@ -22,15 +22,10 @@ export default function Cards(projectData){
                     </li>
                 </ul>
                 <ul>
-                    <a class="button" href="">Add Task</a>
-                    <a class="button" href="">Add Interaction</a>
-                    <a class="button" href="">Update Task</a>
+                    <a id="task" onclick="SetID('${projectData.data.projectID}')" class="button" href="./taskForm.html">Add Task</a>
+                    <a id="addInteraction" onclick="SetID('${projectData.data.projectID}')" class="button" href="./interactionForm.html">Add Interaction</a>
+                    <a id="updateTask" onclick="SetID('${projectData.data.projectID}')" class="button" href="./tasksCard.html">Update Task</a>
                 </ul>
-            </section>
-            `
-}
-//${projectData.map(project => ProjectsDataRow(project)).join("")}
-
-
-
-            
+            </div>
+            `;
+}           

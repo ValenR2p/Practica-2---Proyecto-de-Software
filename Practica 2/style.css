@@ -3,26 +3,54 @@
     --color-navbar: rgb(28, 34, 41);
     --color-buttons: rgb(28, 145, 28);
     --color-hover: rgb(24, 129, 24);
+    --color-text: rgb(255, 255, 255);
 }
-main{
-    overflow: auto;
-}
-footer{
+
+body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+main {
+    flex-grow: 1;
+    background-color: var(--color-fondo);
+
+}
+
+.footer{
+    display: flex;
+    flex-wrap: wrap;
     background-color: var(--color-navbar);
-    color: azure;
-    padding: 1rem;
+    color: var(--color-text);
+    padding: 2rem;
+    width: 100%;
 }
 .footer__logo{
     width: 200px;
 }
+
 .navbar{
     background-color: var(--color-navbar);
-    color: azure;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: var(--color-text);
+}
+.navbar div{
+    align-items: center;
+}
+.nav-link{
+    color: var(--color-text);
+    border-radius: 6px;
+    margin: 4px;
+    border-style: solid;
+    border-color: rgb(160, 160, 160);
+    border-width: 1px;
+}
+.logo{
+    width:100px;
 }
 
-/*Home sections*/
 .home_section{
     display: flex;
     flex-direction: row;
@@ -35,7 +63,7 @@ footer{
 }
 .home_section:nth-child(odd){
     background-color: var(--color-fondo);
-    color: white;
+    color: var(--color-text);
 }
 .home_section div{
     padding-left: 2rem;
@@ -44,45 +72,63 @@ footer{
     width: 200px;
 }
 
-/*Cards*/
 .cards{
+    overflow: auto;
     display:grid;   
-    background-color: var(--color-fondo);
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
 .card{
-    max-height: 350px;
-    overflow: hidden;
-    background-color: rgb(233, 233, 233);
+    max-height: 450px;
+    background-color: rgb(255, 255, 255);
     padding: 2rem;
     margin: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 4rem;
     border-radius: 10px;
+    overflow: hidden;
 }
 .content{
     overflow-y: auto;
 }
 
-/*Formulary*/
 .formulary{
-    padding: 5rem;
-    background-color: var(--color-fondo);
-    color: azure;
+    padding: 4rem;
+    padding-bottom: 2rem;
+    color: var(--color-text);
 }
 
-/*All buttons*/
 .button {
     width: 150px;
     display: inline-block;
     background-color: var(--color-buttons);
-    color: white;
+    color: var(--color-text);
     text-decoration: none;
     border-radius: 6px;
     text-align: center;
     padding: 8px;
     box-shadow: 1px 5px 10px #1b1b1b;
-    margin: 3px;
 }
 .button:hover{
     background-color: var(--color-hover)
+}
+
+.paginator {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    list-style: none;
+    padding: 2rem;
+}
+.paginator button{
+    padding: 10px;
+    border-style:solid;
+    border-color: rgb(228, 228, 228);
+    border-width: 0.1rem;
+}
+.paginator button:first-child {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.paginator button:last-child {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
 }

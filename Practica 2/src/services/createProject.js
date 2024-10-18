@@ -2,7 +2,7 @@ export default function CreateProject(){
     const formData = {
         projectName: document.getElementById('name').value,
         endDate: document.getElementById('endDate').value,
-        clientID: document.getElementById('client').value,
+        clientID: localStorage.getItem('Id'),
         campaignType: document.getElementById('campaign').value,
     };
 
