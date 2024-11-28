@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <nav id="navbar" class="navbar"></nav>
+
+    <main id="main" class="main">
+        <section class="projects-container">
+            <form class="search-form" action="">
+                <div class="">
+                    <input type="text" class="form-control" placeholder="Client" id="client">
+                </div>
+                <div class="">
+                    <input type="name" class="form-control" placeholder="Name" id="name">
+                </div>
+                <div class="">
+                    <select type="text" class="form-control" placeholder="Campaign" id="campaign">
+                        <option value="">Elija una opcion</option>
+                    </select>
+                </div>
+                <button class="button" type="submit" id="search">Search</button>
+            </form>
+            <section id="projectsList" class="projectsList"></section>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+
+    <script type="module" src="./assets/js/views/projectList.js"></script>
+</body>
+
+</html>
